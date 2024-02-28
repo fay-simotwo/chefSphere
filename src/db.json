@@ -1,0 +1,653 @@
+{
+    "Recipes": [
+      {
+        "id": "1",
+        "name": "Spaghetti Bolognese",
+        "ingredients": [
+          {
+            "id": "1",
+            "quantity": 400,
+            "unit": "gram",
+            "ingredient": "spaghetti"
+          },
+          {
+            "id": "2",
+            "quantity": 500,
+            "unit": "gram",
+            "ingredient": "ground beef"
+          },
+          {
+            "id": "3",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "tomato sauce"
+          },
+          { "id": "4", "quantity": 1, "unit": "teaspoon", "ingredient": "salt" }
+        ],
+        "instructions": [   
+          {
+            "id": "1",
+            "title": "Boil Spaghetti",
+            "description": "Boil spaghetti until al dente."
+          },
+          {
+            "id": "2",
+            "title": "Cook Beef",
+            "description": "Cook ground beef until browned."
+          }
+        ],
+        "image": "spaghetti_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=spaghetti_video",
+        "gallery": [
+          { "id": "1", "url": "spaghetti_gallery1.jpg" },
+          { "id": "2", "url": "spaghetti_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 15, "duration_description": "min" },
+          "cooking": { "duration": 30, "duration_description": "min" },
+          "total": { "duration": 45, "duration_description": "min" }
+        },
+        "calories": 600,
+        "diet_breakdown": { "fat": 20, "carbs": 50, "protein": 30 },
+        "servings": 4,
+        "ratings": {
+          "average_rating": 4.5,
+          "total_rating": 100,
+          "chefs_who_rated": 20
+        },
+        "categories": [
+          { "id": "1", "title": "Italian" },
+          { "id": "2", "title": "Pasta" }
+        ],
+        "chef": {
+          "id": "1",
+          "name": "Chef John",
+          "avatar": "chef_john_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T12:00:00Z",
+        "last_updated_on": "2024-02-26T14:30:00Z"
+      },
+  
+      {
+        "id": "2",
+        "name": "Chicken Alfredo",
+        "ingredients": [
+          {
+            "id": "5",
+            "quantity": 300,
+            "unit": "gram",
+            "ingredient": "fettuccine"
+          },
+          {
+            "id": "6",
+            "quantity": 400,
+            "unit": "gram",
+            "ingredient": "chicken breast"
+          },
+          {
+            "id": "7",
+            "quantity": 2,
+            "unit": "cup",
+            "ingredient": "heavy cream"
+          },
+          {
+            "id": "8",
+            "quantity": 1,
+            "unit": "teaspoon",
+            "ingredient": "garlic powder"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "3",
+            "title": "Cook Fettuccine",
+            "description": "Cook fettuccine according to package instructions."
+          },
+          {
+            "id": "4",
+            "title": "Prepare Chicken",
+            "description": "Season and cook chicken until fully cooked."
+          }
+        ],
+        "image": "chicken_alfredo_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=chicken_alfredo_video",
+        "gallery": [
+          { "id": "3", "url": "chicken_alfredo_gallery1.jpg" },
+          { "id": "4", "url": "chicken_alfredo_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 20, "duration_description": "min" },
+          "cooking": { "duration": 25, "duration_description": "min" },
+          "total": { "duration": 45, "duration_description": "min" }
+        },
+        "calories": 800,
+        "diet_breakdown": { "fat": 40, "carbs": 30, "protein": 30 },
+        "servings": 3,
+        "ratings": {
+          "average_rating": 4.2,
+          "total_rating": 90,
+          "chefs_who_rated": 15
+        },
+        "categories": [
+          { "id": "3", "title": "Italian" },
+          { "id": "4", "title": "Chicken" }
+        ],
+        "chef": {
+          "id": "2",
+          "name": "Chef Emily",
+          "avatar": "chef_emily_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T13:00:00Z",
+        "last_updated_on": "2024-02-26T15:15:00Z"
+      },
+      {
+        "id": "4",
+        "name": "Margherita Pizza",
+        "ingredients": [
+          {
+            "id": "13",
+            "quantity": 1,
+            "unit": "piece",
+            "ingredient": "pizza dough"
+          },
+          {
+            "id": "14",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "tomato sauce"
+          },
+          {
+            "id": "15",
+            "quantity": 200,
+            "unit": "gram",
+            "ingredient": "mozzarella cheese"
+          },
+          {
+            "id": "16",
+            "quantity": 1,
+            "unit": "teaspoon",
+            "ingredient": "olive oil"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "7",
+            "title": "Roll Out Dough",
+            "description": "Roll out pizza dough into a thin crust."
+          },
+          {
+            "id": "8",
+            "title": "Add Toppings",
+            "description": "Spread tomato sauce, add mozzarella, and drizzle olive oil."
+          }
+        ],
+        "image": "margherita_pizza_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=margherita_pizza_video",
+        "gallery": [
+          { "id": "7", "url": "margherita_pizza_gallery1.jpg" },
+          { "id": "8", "url": "margherita_pizza_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 20, "duration_description": "min" },
+          "cooking": { "duration": 15, "duration_description": "min" },
+          "total": { "duration": 35, "duration_description": "min" }
+        },
+        "calories": 700,
+        "diet_breakdown": { "fat": 30, "carbs": 50, "protein": 20 },
+        "servings": 2,
+        "ratings": {
+          "average_rating": 4.8,
+          "total_rating": 120,
+          "chefs_who_rated": 25
+        },
+        "categories": [
+          { "id": "7", "title": "Italian" },
+          { "id": "8", "title": "Pizza" }
+        ],
+        "chef": {
+          "id": "4",
+          "name": "Chef Michael",
+          "avatar": "chef_michael_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T15:00:00Z",
+        "last_updated_on": "2024-02-26T17:30:00Z"
+      },
+  
+      {
+        "id": "5",
+        "name": "Grilled Salmon",
+        "ingredients": [
+          {
+            "id": "17",
+            "quantity": 2,
+            "unit": "pieces",
+            "ingredient": "salmon fillets"
+          },
+          {
+            "id": "18",
+            "quantity": 1,
+            "unit": "tablespoon",
+            "ingredient": "lemon juice"
+          },
+          { "id": "19", "quantity": 1, "unit": "teaspoon", "ingredient": "dill" },
+          {
+            "id": "20",
+            "quantity": 2,
+            "unit": "tablespoon",
+            "ingredient": "olive oil"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "9",
+            "title": "Marinate Salmon",
+            "description": "Marinate salmon fillets with lemon juice and dill."
+          },
+          {
+            "id": "10",
+            "title": "Grill Salmon",
+            "description": "Grill the salmon fillets in olive oil until cooked through."
+          }
+        ],
+        "image": "grilled_salmon_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=grilled_salmon_video",
+        "gallery": [
+          { "id": "9", "url": "grilled_salmon_gallery1.jpg" },
+          { "id": "10", "url": "grilled_salmon_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 15, "duration_description": "min" },
+          "cooking": { "duration": 15, "duration_description": "min" },
+          "total": { "duration": 30, "duration_description": "min" }
+        },
+        "calories": 450,
+        "diet_breakdown": { "fat": 25, "carbs": 0, "protein": 30 },
+        "servings": 2,
+        "ratings": {
+          "average_rating": 4.6,
+          "total_rating": 110,
+          "chefs_who_rated": 22
+        },
+        "categories": [
+          { "id": "9", "title": "Seafood" },
+          { "id": "10", "title": "Grilled" }
+        ],
+        "chef": {
+          "id": "5",
+          "name": "Chef Jessica",
+          "avatar": "chef_jessica_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T15:45:00Z",
+        "last_updated_on": "2024-02-26T18:00:00Z"
+      },
+      {
+        "id": "6",
+        "name": "BBQ Pulled Pork Sandwiches",
+        "ingredients": [
+          {
+            "id": "21",
+            "quantity": 500,
+            "unit": "gram",
+            "ingredient": "pork shoulder"
+          },
+          { "id": "22", "quantity": 1, "unit": "cup", "ingredient": "BBQ sauce" },
+          {
+            "id": "23",
+            "quantity": 4,
+            "unit": "pieces",
+            "ingredient": "hamburger buns"
+          },
+          { "id": "24", "quantity": 1, "unit": "cup", "ingredient": "coleslaw" }
+        ],
+        "instructions": [
+          {
+            "id": "11",
+            "title": "Slow Cook Pork",
+            "description": "Slow cook pork shoulder until it can be easily shredded."
+          },
+          {
+            "id": "12",
+            "title": "Shred Pork",
+            "description": "Shred the cooked pork and mix with BBQ sauce."
+          },
+          {
+            "id": "13",
+            "title": "Assemble Sandwich",
+            "description": "Pile pulled pork onto buns and top with coleslaw."
+          }
+        ],
+        "image": "pulled_pork_sandwich_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=pulled_pork_sandwich_video",
+        "gallery": [
+          { "id": "11", "url": "pulled_pork_sandwich_gallery1.jpg" },
+          { "id": "12", "url": "pulled_pork_sandwich_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 30, "duration_description": "min" },
+          "cooking": { "duration": 240, "duration_description": "min" },
+          "total": { "duration": 270, "duration_description": "min" }
+        },
+        "calories": 600,
+        "diet_breakdown": { "fat": 25, "carbs": 50, "protein": 25 },
+        "servings": 4,
+        "ratings": {
+          "average_rating": 4.3,
+          "total_rating": 95,
+          "chefs_who_rated": 18
+        },
+        "categories": [
+          { "id": "11", "title": "BBQ" },
+          { "id": "12", "title": "Sandwich" }
+        ],
+        "chef": {
+          "id": "6",
+          "name": "Chef Robert",
+          "avatar": "chef_robert_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T17:00:00Z",
+        "last_updated_on": "2024-02-26T19:30:00Z"
+      },
+      {
+        "id": "7",
+        "name": "Vegetarian Quinoa Bowl",
+        "ingredients": [
+          { "id": "25", "quantity": 1, "unit": "cup", "ingredient": "quinoa" },
+          {
+            "id": "26",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "cherry tomatoes, halved"
+          },
+          {
+            "id": "27",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "cucumber, diced"
+          },
+          {
+            "id": "28",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "avocado, sliced"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "14",
+            "title": "Cook Quinoa",
+            "description": "Cook quinoa according to package instructions."
+          },
+          {
+            "id": "15",
+            "title": "Assemble Bowl",
+            "description": "Combine quinoa, cherry tomatoes, cucumber, and avocado in a bowl."
+          }
+        ],
+        "image": "quinoa_bowl_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=quinoa_bowl_video",
+        "gallery": [
+          { "id": "13", "url": "quinoa_bowl_gallery1.jpg" },
+          { "id": "14", "url": "quinoa_bowl_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 15, "duration_description": "min" },
+          "cooking": { "duration": 15, "duration_description": "min" },
+          "total": { "duration": 30, "duration_description": "min" }
+        },
+        "calories": 450,
+        "diet_breakdown": { "fat": 20, "carbs": 60, "protein": 15 },
+        "servings": 2,
+        "ratings": {
+          "average_rating": 4.7,
+          "total_rating": 110,
+          "chefs_who_rated": 20
+        },
+        "categories": [
+          { "id": "13", "title": "Vegetarian" },
+          { "id": "14", "title": "Healthy" }
+        ],
+        "chef": {
+          "id": "7",
+          "name": "Chef Olivia",
+          "avatar": "chef_olivia_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T18:00:00Z",
+        "last_updated_on": "2024-02-26T20:15:00Z"
+      },
+      {
+        "id": "8",
+        "name": "Teriyaki Salmon",
+        "ingredients": [
+          {
+            "id": "29",
+            "quantity": 2,
+            "unit": "pieces",
+            "ingredient": "salmon fillets"
+          },
+          {
+            "id": "30",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "teriyaki sauce"
+          },
+          {
+            "id": "31",
+            "quantity": 1,
+            "unit": "tablespoon",
+            "ingredient": "sesame oil"
+          },
+          {
+            "id": "32",
+            "quantity": 1,
+            "unit": "tablespoon",
+            "ingredient": "soy sauce"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "16",
+            "title": "Marinate Salmon",
+            "description": "Marinate salmon fillets in a mixture of teriyaki sauce, sesame oil, and soy sauce."
+          },
+          {
+            "id": "17",
+            "title": "Grill Salmon",
+            "description": "Grill marinated salmon until cooked through."
+          }
+        ],
+        "image": "teriyaki_salmon_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=teriyaki_salmon_video",
+        "gallery": [
+          { "id": "15", "url": "teriyaki_salmon_gallery1.jpg" },
+          { "id": "16", "url": "teriyaki_salmon_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 20, "duration_description": "min" },
+          "cooking": { "duration": 15, "duration_description": "min" },
+          "total": { "duration": 35, "duration_description": "min" }
+        },
+        "calories": 550,
+        "diet_breakdown": { "fat": 30, "carbs": 15, "protein": 55 },
+        "servings": 2,
+        "ratings": {
+          "average_rating": 4.9,
+          "total_rating": 130,
+          "chefs_who_rated": 28
+        },
+        "categories": [
+          { "id": "15", "title": "Seafood" },
+          { "id": "16", "title": "Japanese" }
+        ],
+        "chef": {
+          "id": "8",
+          "name": "Chef Ethan",
+          "avatar": "chef_ethan_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T19:00:00Z",
+        "last_updated_on": "2024-02-26T21:15:00Z"
+      },
+      {
+        "id": "9",
+        "name": "Mushroom Risotto",
+        "ingredients": [
+          {
+            "id": "33",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "Arborio rice"
+          },
+          {
+            "id": "34",
+            "quantity": 200,
+            "unit": "gram",
+            "ingredient": "mushrooms, sliced"
+          },
+          {
+            "id": "35",
+            "quantity": 1,
+            "unit": "cup",
+            "ingredient": "chicken broth"
+          },
+          { "id": "36", "quantity": 1, "unit": "cup", "ingredient": "white wine" }
+        ],
+        "instructions": [
+          {
+            "id": "18",
+            "title": "Saute Mushrooms",
+            "description": "Saute sliced mushrooms until browned."
+          },
+          {
+            "id": "19",
+            "title": "Cook Rice",
+            "description": "Add Arborio rice and cook until translucent."
+          },
+          {
+            "id": "20",
+            "title": "Add Liquids",
+            "description": "Gradually add chicken broth and white wine, stirring until absorbed."
+          }
+        ],
+        "image": "mushroom_risotto_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=mushroom_risotto_video",
+        "gallery": [
+          { "id": "17", "url": "mushroom_risotto_gallery1.jpg" },
+          { "id": "18", "url": "mushroom_risotto_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 20, "duration_description": "min" },
+          "cooking": { "duration": 30, "duration_description": "min" },
+          "total": { "duration": 50, "duration_description": "min" }
+        },
+        "calories": 500,
+        "diet_breakdown": { "fat": 10, "carbs": 80, "protein": 15 },
+        "servings": 3,
+        "ratings": {
+          "average_rating": 4.5,
+          "total_rating": 100,
+          "chefs_who_rated": 24
+        },
+        "categories": [
+          { "id": "17", "title": "Italian" },
+          { "id": "18", "title": "Risotto" }
+        ],
+        "chef": {
+          "id": "9",
+          "name": "Chef Isabella",
+          "avatar": "chef_isabella_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T20:00:00Z",
+        "last_updated_on": "2024-02-26T22:15:00Z"
+      },
+  
+      {
+        "id": "10",
+        "name": "Lemon Garlic Shrimp Pasta",
+        "ingredients": [
+          {
+            "id": "37",
+            "quantity": 300,
+            "unit": "gram",
+            "ingredient": "shrimp, peeled and deveined"
+          },
+          {
+            "id": "38",
+            "quantity": 200,
+            "unit": "gram",
+            "ingredient": "linguine pasta"
+          },
+          { "id": "39", "quantity": 1, "unit": "lemon, juiced" },
+          {
+            "id": "40",
+            "quantity": 2,
+            "unit": "cloves",
+            "ingredient": "garlic, minced"
+          }
+        ],
+        "instructions": [
+          {
+            "id": "21",
+            "title": "Cook Pasta",
+            "description": "Cook linguine pasta according to package instructions."
+          },
+          {
+            "id": "22",
+            "title": "Saute Shrimp",
+            "description": "Saute shrimp in minced garlic until pink."
+          },
+          {
+            "id": "23",
+            "title": "Combine Ingredients",
+            "description": "Combine cooked pasta, sauteed shrimp, and lemon juice."
+          }
+        ],
+        "image": "lemon_garlic_shrimp_pasta_image.jpg",
+        "video_url": "https://www.youtube.com/watch?v=lemon_garlic_shrimp_pasta_video",
+        "gallery": [
+          { "id": "19", "url": "lemon_garlic_shrimp_pasta_gallery1.jpg" },
+          { "id": "20", "url": "lemon_garlic_shrimp_pasta_gallery2.jpg" }
+        ],
+        "time_allocations": {
+          "preparation": { "duration": 15, "duration_description": "min" },
+          "cooking": { "duration": 20, "duration_description": "min" },
+          "total": { "duration": 35, "duration_description": "min" }
+        },
+        "calories": 550,
+        "diet_breakdown": { "fat": 15, "carbs": 70, "protein": 30 },
+        "servings": 2,
+        "ratings": {
+          "average_rating": 4.7,
+          "total_rating": 120,
+          "chefs_who_rated": 26
+        },
+        "categories": [
+          { "id": "19", "title": "Seafood" },
+          { "id": "20", "title": "Pasta" }
+        ],
+        "chef": {
+          "id": "10",
+          "name": "Chef Daniel",
+          "avatar": "chef_daniel_avatar.jpg"
+        },
+        "isBookmarked": false,
+        "isPublic": true,
+        "created_at": "2024-02-26T21:00:00Z",
+        "last_updated_on": "2024-02-26T23:15:00Z"
+      }
+    ]
+  }
