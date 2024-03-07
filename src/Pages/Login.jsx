@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -13,14 +14,63 @@ import { Button } from "@/components/ui/button";
 import { IoMdEyeOff, IoMdEye } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "./Logo";
+import { doSignInWithEmailAndPassword } from "../firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useAuth } from "../context/authContext";
+
+const auth = getAuth();
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
+  const handleSignIn = async () => {
+    try {
+      console.log("Attempting to sign in with email and password...");
+      await doSignInWithEmailAndPassword(email, password);
+      console.log("Sign in with email and password successful!");
+      // Redirect to homepage after successful sign-in
+      navigate("/home");
+    } catch (error) {
+      // Handle sign-in error, you might want to display an error message
+      console.error("Sign In Error:", error.message);
+    }
+  };
+  
+  const handleSignInWithGoogle = async () => {
+    console.log("Attempting to sign in with Google...");
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        console.log("Sign in with Google successful!");
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Sign In with Google Error:", errorMessage);
+        // The email of the user's account used.
+        const email = error.customData?.email;
+        console.log("Email used:", email);
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log("Auth Credential used:", credential);
+        // ...
+      });
+  };
+  
   return (
     <div className="flex justify-center items-center h-3/5 mt-2  ">
       <Card className="max-w-6xl w-full flex-shrink-0 rounded-3xl shadow-xl bg-whiresmoke">
@@ -63,6 +113,8 @@ function Login() {
                   type="text"
                   id="email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="w-full p-2 border rounded-md bg-slate-100 border-0	"
                 />
@@ -73,6 +125,8 @@ function Login() {
                     type={showPassword ? "text" : "password"}
                     id="password"
                     name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter your password"
                     className="w-full p-2 border rounded-md pr-10 bg-slate-100 border-0	"
                   />
@@ -99,10 +153,16 @@ function Login() {
                   </span>
                 </div>
 
-                <Button className="w-full p-2 border rounded-md">
+                <Button
+                  className="w-full p-2 border rounded-md"
+                  onClick={handleSignIn}
+                >
                   Sign In
                 </Button>
-                <Button className="w-full p-2 border rounded-md shadow-md bg-white text-black hover:text-white ">
+                <Button
+                  className="w-full p-2 border rounded-md shadow-md bg-white text-black hover:text-white "
+                  onClick={handleSignInWithGoogle}
+                >
                   <FcGoogle size={24} className="mr-2" />
                   Sign In With Google
                 </Button>
