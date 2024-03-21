@@ -1,3 +1,4 @@
+// Login.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -35,14 +36,30 @@ function Login() {
       console.log("Attempting to sign in with email and password...");
       await doSignInWithEmailAndPassword(email, password);
       console.log("Sign in with email and password successful!");
-      // Redirect to homepage after successful sign-in
-      navigate("/home");
+      // Redirect to the chef profile page after successful sign-in
+      navigate(`/profile/${email}`);
     } catch (error) {
-      // Handle sign-in error, you might want to display an error message
-      console.error("Sign In Error:", error.message);
+      // If the user does not exist, create a new account
+      if (error.code === "auth/user-not-found") {
+        try {
+          console.log("User not found. Creating a new account...");
+  
+          // Create a new user with the provided email and password
+          await createUserWithEmailAndPassword(auth, email, password);
+  
+          console.log("New account created and signed in successfully!");
+  
+          // Redirect to the chef profile page after successful sign-in
+          navigate(`/profile/${email}`);
+        } catch (createError) {
+          console.error("Error creating a new account:", createError.message);
+        }
+      } else {
+        // Handle other sign-in errors
+        console.error("Sign In Error:", error.message);
+      }
     }
   };
-  
   const handleSignInWithGoogle = async () => {
     console.log("Attempting to sign in with Google...");
     signInWithPopup(auth, provider)
@@ -70,7 +87,7 @@ function Login() {
         // ...
       });
   };
-  
+
   return (
     <div className="flex justify-center items-center h-3/5 mt-2  ">
       <Card className="max-w-6xl w-full flex-shrink-0 rounded-3xl shadow-xl bg-whiresmoke">
@@ -169,7 +186,7 @@ function Login() {
 
                 <p className="text-gray-600 text-sm text-center mt-12">
                   Don't have an account?{" "}
-                  <a href="#" className="text-blue-500 hover:underline">
+                  <a href="/signup" className="text-blue-500 hover:underline">
                     Sign up
                   </a>
                 </p>
