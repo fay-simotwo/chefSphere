@@ -24,7 +24,7 @@ export function AuthProvider({ children }){
             setCurrentUser({...user});
             setUserLoggedIn(true);
         } else{
-            setCorrectUser(null);
+            setCurrentUser(null);
             setUserLoggedIn(false);
         }
         setLoading(false);

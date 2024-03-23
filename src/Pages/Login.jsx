@@ -16,8 +16,8 @@ import { IoMdEyeOff, IoMdEye } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "./Logo";
 import { doSignInWithEmailAndPassword } from "../firebase/auth";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuth } from "../context/authContext";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect, signOut } from "firebase/auth";
 
 const auth = getAuth();
 
@@ -61,33 +61,18 @@ function Login() {
     }
   };
   const handleSignInWithGoogle = async () => {
-    console.log("Attempting to sign in with Google...");
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        console.log("Sign in with Google successful!");
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error("Sign In with Google Error:", errorMessage);
-        // The email of the user's account used.
-        const email = error.customData?.email;
-        console.log("Email used:", email);
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log("Auth Credential used:", credential);
-        // ...
-      });
+    try {
+      console.log("Attempting to sign in with Google...");
+      const provider = new GoogleAuthProvider(); // Define provider here
+      const result = await signInWithPopup(auth, provider);
+      console.log("Sign in with Google successful!");
+      // Handle success, maybe redirect or display some info
+    } catch (error) {
+      console.error("Sign In with Google Error:", error.message);
+      // Handle error, maybe display an error message to the user
+    }
   };
-
+  
   return (
     <div className="flex justify-center items-center h-3/5 mt-2  ">
       <Card className="max-w-6xl w-full flex-shrink-0 rounded-3xl shadow-xl bg-whiresmoke">
