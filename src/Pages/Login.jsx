@@ -16,8 +16,10 @@ import { IoMdEyeOff, IoMdEye } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "./Logo";
 import { doSignInWithEmailAndPassword } from "../firebase/auth";
-import { useAuth } from "../context/authContext";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect, signOut } from "firebase/auth";
+import { useAuth } from "../context/authContext";
+import { toast } from "react-hot-toast";
+
 
 const auth = getAuth();
 
@@ -38,6 +40,7 @@ function Login() {
       console.log("Sign in with email and password successful!");
       // Redirect to the chef profile page after successful sign-in
       navigate(`/profile/${email}`);
+      toast.success("Sign in successful!")
     } catch (error) {
       // If the user does not exist, create a new account
       if (error.code === "auth/user-not-found") {
@@ -57,6 +60,8 @@ function Login() {
       } else {
         // Handle other sign-in errors
         console.error("Sign In Error:", error.message);
+        toast.error("Incorrect email or password. Please try again.");
+
       }
     }
   };
