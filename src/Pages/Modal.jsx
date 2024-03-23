@@ -31,13 +31,6 @@ function Modal({ children, onClose, onSave, chef }) {
         
         <div className="mt-4">{children}</div>
         
-        <button
-          onClick={handleSave}
-          type="button"
-          className="bg-slate-950 text-white px-4 py-2 rounded mt-4 hover:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full"
-        >
-          Save
-        </button>
       </div>
     </div>,
     document.body
